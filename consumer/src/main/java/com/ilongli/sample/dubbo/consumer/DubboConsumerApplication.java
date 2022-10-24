@@ -25,4 +25,14 @@ public class DubboConsumerApplication {
         return demoServiceRpc.doSayHello(name);
     }
 
+    @GetMapping("stream")
+    public String helloStream(String name) {
+        return demoServiceRpc.doSayHelloStream(name);
+    }
+
+    @GetMapping("stream2")
+    public String helloStream2(String name) {
+        return demoServiceRpc.doSayHelloStream2(name);
+    }
+
 }

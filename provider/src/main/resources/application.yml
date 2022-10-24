@@ -1,8 +1,12 @@
 dubbo:
   application:
     name: dubbo-springboot-demo-provider
+    # 注册模式，all、instance（应用级别）、interface（接口级别）
+    register-mode: instance
   protocol:
-    name: dubbo
+    # 协议名称，dubbo、tri（triple）
+    # 注意：使用tri协议的时候，pom.xml要导入对应的依赖
+    name: tri
     port: -1
   registry:
     id: zk-registry
