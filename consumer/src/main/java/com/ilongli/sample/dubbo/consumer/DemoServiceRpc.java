@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoServiceRpc {
 
-    @DubboReference
+    @DubboReference(version = "2.0")
     private DemoService demoService;
 
     public String doSayHello(String name) {

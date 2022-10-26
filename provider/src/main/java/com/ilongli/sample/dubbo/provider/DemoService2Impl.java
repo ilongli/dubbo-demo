@@ -9,13 +9,13 @@ import org.apache.dubbo.rpc.RpcContext;
  * @author ilongli
  * @date 2022/10/19 17:35
  */
-@DubboService(version = "1.0")
-public class DemoServiceImpl implements DemoService {
+@DubboService(version = "2.0")
+public class DemoService2Impl implements DemoService {
 
     @Override
     public String sayHello(String name) {
         System.out.println("Hello " + name + ", request from consumer: " + RpcContext.getServiceContext().getRemoteAddress());
-        return "Hello " + name;
+        return "[2]Hello " + name;
     }
 
 
