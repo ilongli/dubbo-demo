@@ -1,3 +1,4 @@
+/*
 package com.ilongli.sample.dubbo.provider;
 
 import org.apache.zookeeper.server.ServerConfig;
@@ -13,6 +14,7 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.UUID;
+*/
 /**
  * from: https://github.com/spring-projects/spring-xd/blob/v1.3.1.RELEASE/spring-xd-dirt/src/main/java/org/springframework/xd/dirt/zookeeper/ZooKeeperUtils.java
  * <p>
@@ -24,120 +26,153 @@ import java.util.UUID;
  * @author Patrick Peralta
  * @author Mark Fisher
  * @author David Turanski
- */
+ *//*
+
 public class EmbeddedZooKeeper implements SmartLifecycle {
 
-    /**
+    */
+/**
      * Logger.
-     */
+     *//*
+
     private static final Logger logger = LoggerFactory.getLogger(EmbeddedZooKeeper.class);
 
-    /**
+    */
+/**
      * ZooKeeper client port. This will be determined dynamically upon startup.
-     */
+     *//*
+
     private final int clientPort;
 
-    /**
+    */
+/**
      * Whether to auto-start. Default is true.
-     */
+     *//*
+
     private boolean autoStartup = true;
 
-    /**
+    */
+/**
      * Lifecycle phase. Default is 0.
-     */
+     *//*
+
     private int phase = 0;
 
-    /**
+    */
+/**
      * Thread for running the ZooKeeper server.
-     */
+     *//*
+
     private volatile Thread zkServerThread;
 
-    /**
+    */
+/**
      * ZooKeeper server.
-     */
+     *//*
+
     private volatile ZooKeeperServerMain zkServer;
 
-    /**
+    */
+/**
      * {@link ErrorHandler} to be invoked if an Exception is thrown from the ZooKeeper server thread.
-     */
+     *//*
+
     private ErrorHandler errorHandler;
 
     private boolean daemon = true;
 
-    /**
+    */
+/**
      * Construct an EmbeddedZooKeeper with a random port.
-     */
+     *//*
+
     public EmbeddedZooKeeper() {
         clientPort = SocketUtils.findAvailableTcpPort();
     }
 
-    /**
+    */
+/**
      * Construct an EmbeddedZooKeeper with the provided port.
      *
      * @param clientPort port for ZooKeeper server to bind to
-     */
+     *//*
+
     public EmbeddedZooKeeper(int clientPort, boolean daemon) {
         this.clientPort = clientPort;
         this.daemon = daemon;
     }
 
-    /**
+    */
+/**
      * Returns the port that clients should use to connect to this embedded server.
      *
      * @return dynamically determined client port
-     */
+     *//*
+
     public int getClientPort() {
         return this.clientPort;
     }
 
-    /**
+    */
+/**
      * Specify whether to start automatically. Default is true.
      *
      * @param autoStartup whether to start automatically
-     */
+     *//*
+
     public void setAutoStartup(boolean autoStartup) {
         this.autoStartup = autoStartup;
     }
 
-    /**
+    */
+/**
      * {@inheritDoc}
-     */
+     *//*
+
     @Override
     public boolean isAutoStartup() {
         return this.autoStartup;
     }
 
-    /**
+    */
+/**
      * Specify the lifecycle phase for the embedded server.
      *
      * @param phase the lifecycle phase
-     */
+     *//*
+
     public void setPhase(int phase) {
         this.phase = phase;
     }
 
-    /**
+    */
+/**
      * {@inheritDoc}
-     */
+     *//*
+
     @Override
     public int getPhase() {
         return this.phase;
     }
 
-    /**
+    */
+/**
      * {@inheritDoc}
-     */
+     *//*
+
     @Override
     public boolean isRunning() {
         return (zkServerThread != null);
     }
 
-    /**
+    */
+/**
      * Start the ZooKeeper server in a background thread.
      * <p>
      * Register an error handler via {@link #setErrorHandler} in order to handle
      * any exceptions thrown during startup or execution.
-     */
+     *//*
+
     @Override
     public synchronized void start() {
         if (zkServerThread == null) {
@@ -147,9 +182,11 @@ public class EmbeddedZooKeeper implements SmartLifecycle {
         }
     }
 
-    /**
+    */
+/**
      * Shutdown the ZooKeeper server.
-     */
+     *//*
+
     @Override
     public synchronized void stop() {
         if (zkServerThread != null) {
@@ -179,28 +216,34 @@ public class EmbeddedZooKeeper implements SmartLifecycle {
         }
     }
 
-    /**
+    */
+/**
      * Stop the server if running and invoke the callback when complete.
-     */
+     *//*
+
     @Override
     public void stop(Runnable callback) {
         stop();
         callback.run();
     }
 
-    /**
+    */
+/**
      * Provide an {@link ErrorHandler} to be invoked if an Exception is thrown from the ZooKeeper server thread. If none
      * is provided, only error-level logging will occur.
      *
      * @param errorHandler the {@link ErrorHandler} to be invoked
-     */
+     *//*
+
     public void setErrorHandler(ErrorHandler errorHandler) {
         this.errorHandler = errorHandler;
     }
 
-    /**
+    */
+/**
      * Runnable implementation that starts the ZooKeeper server.
-     */
+     *//*
+
     private class ServerRunnable implements Runnable {
 
         @Override
@@ -232,3 +275,4 @@ public class EmbeddedZooKeeper implements SmartLifecycle {
     }
 
 }
+*/
